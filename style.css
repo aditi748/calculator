@@ -68,7 +68,7 @@ body.theme-1 nav {
   background-color: #2a2a2a;
 }
 
-body.theme-1 .nav-container{
+body.theme-1 .nav-container {
   background-color: #2a2a2a;
 }
 
@@ -135,13 +135,13 @@ body.theme-2 nav {
   background: linear-gradient(90deg, #3a1305, #802515);
 }
 
-body.theme-2 .nav-container{
+body.theme-2 .nav-container {
   background: linear-gradient(90deg, #3a1305, #802515);
-
 }
 
 body.theme-2 .container {
   background: rgba(60, 20, 10, 0.9);
+  box-shadow: 2px 8px 30px rgba(92, 26, 26, 0.795);
 }
 
 body.theme-2 .display {
@@ -208,13 +208,13 @@ body.theme-3 nav {
   background: linear-gradient(90deg, #2f2e41, #483c67);
 }
 
-body.theme-3 .nav-container{
+body.theme-3 .nav-container {
   background: linear-gradient(90deg, #2f2e41, #483c67);
-
 }
 
 body.theme-3 .container {
   background: rgb(46, 34, 96);
+  box-shadow: 2px 8px 30px rgba(38, 6, 80, 0.72);
 }
 
 body.theme-3 p {
@@ -275,13 +275,13 @@ body.theme-4 nav {
   background: linear-gradient(90deg, #092436, #125b66);
 }
 
-body.theme-4 .nav-container{
+body.theme-4 .nav-container {
   background: linear-gradient(90deg, #092436, #125b66);
-
 }
 
 body.theme-4 .container {
   background: rgba(20, 52, 70, 0.9);
+  box-shadow: 2px 8px 30px rgb(5, 55, 77);
 }
 
 body.theme-4 .display {
@@ -335,7 +335,7 @@ body.theme-4 .op:hover {
   color: #b8e2e9;
 }
 
-nav .links:hover{
+nav .links:hover {
   cursor: pointer;
 }
 
@@ -357,6 +357,7 @@ nav .links:hover{
   gap: 16px 24px;
   border-radius: 8px;
   background-color: #000000;
+  box-shadow: 2px 8px 30px rgb(72, 70, 70);
 }
 
 p {
@@ -468,7 +469,7 @@ footer {
     height: 36px;
     width: 36px;
   }
-  
+
   .nav-bar {
     gap: 8px;
   }
@@ -496,8 +497,6 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-  
-
   .nav-container {
     width: 92%;
   }
@@ -527,7 +526,7 @@ footer {
     gap: 12px 14px;
   }
 
-  .nav-container{
+  .nav-container {
     width: 94%;
   }
 
