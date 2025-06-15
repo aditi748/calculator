@@ -6,29 +6,45 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100vh;
+  height: auto;
   background-color: #1e1e1e;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-y: auto;
+  color: white;
+}
+
+body {
+  overflow-x: auto;
+  min-width: 360px;
 }
 
 nav {
+  width: 100%;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
-  justify-content: center;
-  background-color: #2a2a2a;
+  justify-content: center; 
 }
 
 .nav-container {
-  width: 90%;
-  align-self: center;
-  height: 60px;
-  background-color: #2a2a2a;
+  width: 100%;
+  max-width: 1200px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 20px;
+  padding: 8px 16px;
+  min-width: 300px;
+  flex-wrap: nowrap;
 }
 
 .nav-bar {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .theme {
@@ -343,13 +359,12 @@ nav .links:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 60px 20px 80px;
+  min-height: calc(100vh - 60px - 40px);
 }
 
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
   display: grid;
   grid-template-rows: 36px 48px 16px 42px 42px 42px 42px 42px;
   grid-template-columns: 42px 42px 42px 42px;
@@ -363,7 +378,6 @@ nav .links:hover {
 p {
   grid-column: 1/5;
   color: white;
-  grid-column: 1/5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -442,17 +456,15 @@ p {
 }
 
 footer {
-  width: 100%;
-  padding: 12px 0;
   text-align: center;
+  padding: 12px 0;
   font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   color: white;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 992px) {
@@ -497,6 +509,10 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+  nav {
+    display: flex;
+    justify-content: center;
+  }
   .nav-container {
     width: 92%;
   }
