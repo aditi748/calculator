@@ -4,29 +4,38 @@
   padding: 0;
 }
 
-html,
-body {
-  min-height: 100vh;
-  height: auto;
-  background-color: #1e1e1e;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  overflow-y: auto;
-  color: white;
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: auto;
 }
 
 body {
-  overflow-x: auto;
-  min-width: 360px;
+  min-height: 100vh; /* Ensures background covers full scrollable height */
+  background-color: #1e1e1e;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-x: auto; /* Allows horizontal scroll if content overflows */
+  min-width: 280px;
+}
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
   width: 100%;
   background-color: #333;
-  position: sticky;
-  top: 0;
+  /* position: sticky; */
+  /* top: 0; */
   z-index: 1000;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .nav-container {
@@ -145,6 +154,10 @@ body.theme-1 nav .theme-btn-1:hover {
 
 body.theme-2 {
   background: linear-gradient(135deg, #4b1d06, #7a2e0e, #c0392b);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 body.theme-2 nav {
@@ -218,6 +231,10 @@ body.theme-2 nav .theme-btn-2:hover {
 
 body.theme-3 {
   background: linear-gradient(135deg, #1c1b29, #483c67);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 body.theme-3 nav {
@@ -285,6 +302,10 @@ body.theme-3 .op:hover {
 
 body.theme-4 {
   background: linear-gradient(135deg, #10375c, #2c8c99);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 body.theme-4 nav {
@@ -356,11 +377,12 @@ nav .links:hover {
 }
 
 .outer-container {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 20px 80px;
-  min-height: calc(100vh - 60px - 40px);
+  width: 100%;
 }
 
 .container {
@@ -462,9 +484,6 @@ footer {
   font-weight: 500;
   color: white;
   background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 @media screen and (max-width: 992px) {
